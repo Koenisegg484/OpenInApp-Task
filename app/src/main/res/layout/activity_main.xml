@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0e6fff"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <TextView
+                        android:id="@+id/dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="30dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/dashboard"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.007"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:srcCompat="@drawable/setting" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/scrollviewbg"
+                android:paddingStart="12dp"
+                android:paddingTop="25dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/greeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good Morning"
+                            android:textColor="#5E5D5D"
+                            android:textSize="17sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/userName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="Shivam Chouhan"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="#000000"
+                                android:textIsSelectable="false"
+                                android:textSize="23sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/wave" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/chartbg2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Overview"
+                            android:textColor="#707070"
+                            android:textFontWeight="200"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:background="@drawable/datebtn"
+                            android:text="22 Aug - 23 Sep"
+                            android:textColor="#0C0C0C"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/fragmentContainer"
+                        android:name="LineChartFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/fragmentContainerView"
+                        android:name="com.myassessment.openinapptask.fragments.EventsDataFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
+                        android:minHeight="50dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/viewanalyticsbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/curvedborder"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/increase" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="0"
+                            android:text="View Analytics"
+                            android:textColor="#535050"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutlv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewanalyticsbutton">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+
+                            <TextView
+                                android:id="@+id/toplinks"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/linksbg"
+                                android:gravity="center"
+                                android:text="Top Links"
+                                android:textColor="#FFFFFF"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/recentlinks"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Recent Links"
+                                android:textColor="#616161"
+                                android:textSize="30sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="30dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                app:srcCompat="@drawable/search" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/toplinksRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            tools:listitem="@layout/yourlinksinforcard" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/viewallLinkssbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/curvedborder"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/LinearLayoutlv">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/link" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="0"
+                            android:text="View all Links"
+                            android:textColor="#535050"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="100dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewallLinkssbutton">
+
+                        <LinearLayout
+                            android:id="@+id/whatsappbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="35dp"
+                            android:background="@drawable/wabg"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="15dp">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/whatsapp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Talk With Us"
+                                android:textColor="#494949"
+                                android:textFontWeight="800"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/faqbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:background="@drawable/faqbg"
+                            android:foregroundGravity="bottom"
+                            android:gravity="end"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="15dp">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/chat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Frequently Asked Questions"
+                                android:textColor="#494949"
+                                android:textFontWeight="800"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorlayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomNavbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#273BE6"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabCradleMargin="15dp"
+            app:fabCradleRoundedCornerRadius="20dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomnavview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#00EC3434"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0e6fff"
+            android:padding="2dp"
+            android:src="@drawable/plus"
+            android:tint="@color/white"
+            app:fabCustomSize="55dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/bottomNavbar"
+            app:maxImageSize="30dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
